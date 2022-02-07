@@ -1,0 +1,102 @@
+﻿<UserControl x:Class="EncryptedChat.Client.CustomControls.TextBox_Placeholder"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:EncryptedChat.Client.CustomControls"
+             mc:Ignorable="d" 
+             MinWidth="50"
+             x:Name="_this">
+    <UserControl.Resources>
+        <Style x:Key="TxTtitleStyle" TargetType="{x:Type TextBlock}">
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Foreground" Value="#a3a3a3"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="Text" Value=""/>
+            <!--Для того чтоб менять значения этого контрола будем биндить плейсхолдер-->
+            <Setter Property="Text" Value="{Binding PlaceHolder,ElementName=_this}"/>
+            <Setter Property="Padding" Value="2,0"/>
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding Text, ElementName=Key}" Value="">
+
+                    <!--Дефолтная позиция и размер шрифта заголовка(Title)-->
+                    <DataTrigger.EnterActions>
+                        <BeginStoryboard>
+                            <Storyboard SpeedRatio="10">
+                                <DoubleAnimation Storyboard.TargetProperty="FontSize" To="15"/>
+                                <ThicknessAnimation Storyboard.TargetProperty="Margin" To="0 0 0 30"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </DataTrigger.EnterActions>
+                    <!--Позиция и размер шрифта когда в Key TextBox вписано значение-->
+                    <DataTrigger.ExitActions>
+                        <BeginStoryboard>
+                            <Storyboard SpeedRatio="10">
+                                <DoubleAnimation Storyboard.TargetProperty="FontSize" To="15"/>
+                                <ThicknessAnimation Storyboard.TargetProperty="Margin" To="0 0 0 30"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </DataTrigger.ExitActions>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="TxTStyle" TargetType="{x:Type TextBox}">
+            <Setter Property="Text" Value="{Binding Text, Mode=TwoWay, ElementName=_this}"/>
+            <Setter Property="TextAlignment" Value="Left"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Padding" Value="2,0"/>
+            <Setter Property="IsReadOnly" Value="False"/>
+
+            <!--Тут короче текст вниз двигаем и увеличиваем фонтсайз-->
+            <Style.Triggers>
+
+
+                <DataTrigger Binding="{Binding FontSize, ElementName=Title}" Value="15">
+
+                    <!--Дефолтная позиция и размер шрифта заголовка(Title)-->
+                    <DataTrigger.EnterActions>
+                        <BeginStoryboard>
+                            <Storyboard SpeedRatio="10">
+                                <DoubleAnimation Storyboard.TargetProperty="FontSize" To="20"/>
+                                <ThicknessAnimation Storyboard.TargetProperty="Margin" To="0 20 0 0"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </DataTrigger.EnterActions>
+                    <!--Посиция и размер шрифта когда в Key TextBox вписано значение-->
+                    <DataTrigger.ExitActions>
+                        <BeginStoryboard>
+                            <Storyboard SpeedRatio="10">
+                                <DoubleAnimation Storyboard.TargetProperty="FontSize" To="15"/>
+                                <ThicknessAnimation Storyboard.TargetProperty="Margin" To="0"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </DataTrigger.ExitActions>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+    </UserControl.Resources>
+    <Border 
+        CornerRadius="15"
+        Background="#261D32"
+        MinHeight="20"
+        Height="60">
+        <Grid Margin="20,4">
+            <TextBlock
+            x:Name="Title"
+            Style="{StaticResource TxTtitleStyle}"/>
+
+            <TextBox
+            x:Name="Key"
+            Style="{StaticResource TxTStyle}"
+            Text=""/>
+        </Grid>
+    </Border>
+    
+    
+</UserControl>
