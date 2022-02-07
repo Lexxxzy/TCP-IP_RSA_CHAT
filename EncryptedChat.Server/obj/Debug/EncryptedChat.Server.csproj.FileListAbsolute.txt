@@ -1,0 +1,7 @@
+C:\Users\lexha\OneDrive\Рабочий стол\Технологии программирования\EncryptedChat-master\EncryptedChat.Server\bin\Debug\EncryptedChat.Server.exe.config
+C:\Users\lexha\OneDrive\Рабочий стол\Технологии программирования\EncryptedChat-master\EncryptedChat.Server\bin\Debug\EncryptedChat.Server.exe
+C:\Users\lexha\OneDrive\Рабочий стол\Технологии программирования\EncryptedChat-master\EncryptedChat.Server\bin\Debug\EncryptedChat.Server.pdb
+C:\Users\lexha\OneDrive\Рабочий стол\Технологии программирования\EncryptedChat-master\EncryptedChat.Server\obj\Debug\EncryptedChat.Server.csproj.CoreCompileInputs.cache
+C:\Users\lexha\OneDrive\Рабочий стол\Технологии программирования\EncryptedChat-master\EncryptedChat.Server\obj\Debug\EncryptedChat.Server.exe
+C:\Users\lexha\OneDrive\Рабочий стол\Технологии программирования\EncryptedChat-master\EncryptedChat.Server\obj\Debug\EncryptedChat.Server.pdb
+C:\Users\lexha\OneDrive\Рабочий стол\Технологии программирования\EncryptedChat-master\EncryptedChat.Server\obj\Debug\EncryptedChat.Server.csprojAssemblyReference.cache
