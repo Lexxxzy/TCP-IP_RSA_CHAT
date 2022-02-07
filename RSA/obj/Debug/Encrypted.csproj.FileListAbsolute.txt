@@ -1,0 +1,6 @@
+C:\Users\lexha\OneDrive\Рабочий стол\Технологии программирования\EncryptedChat-master\RSA\bin\Debug\Encrypted.dll
+C:\Users\lexha\OneDrive\Рабочий стол\Технологии программирования\EncryptedChat-master\RSA\bin\Debug\Encrypted.pdb
+C:\Users\lexha\OneDrive\Рабочий стол\Технологии программирования\EncryptedChat-master\RSA\obj\Debug\Encrypted.csproj.CoreCompileInputs.cache
+C:\Users\lexha\OneDrive\Рабочий стол\Технологии программирования\EncryptedChat-master\RSA\obj\Debug\Encrypted.dll
+C:\Users\lexha\OneDrive\Рабочий стол\Технологии программирования\EncryptedChat-master\RSA\obj\Debug\Encrypted.pdb
+C:\Users\lexha\OneDrive\Рабочий стол\Технологии программирования\EncryptedChat-master\RSA\obj\Debug\Encrypted.csprojAssemblyReference.cache
